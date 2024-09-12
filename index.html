@@ -1,25 +1,17 @@
 <style>
 .movie-credits {
-  position: relative;
   display: flex;
   flex-direction: column;
-  align-items: start;
-  color: #fff;
-  justify-content: start;
-  font: 400 40px Inter, sans-serif;
 }
 
 .credits-container {
   background-color: #fff;
-  position: absolute;
-  z-index: 0;
   display: flex;
-  width: 1440px;
+  width: 100%;
   flex-direction: column;
   overflow: hidden;
-  right: 0;
-  bottom: 0;
-  height: 1024px;
+  align-items: center;
+  justify-content: center;
   padding: 140px 80px;
   border: 1px solid #000;
 }
@@ -32,6 +24,7 @@
   margin-bottom: -28px;
   width: 100%;
   max-width: 1026px;
+  align-items: center;
   padding: 25px 13px 15px;
 }
 
@@ -44,44 +37,43 @@
   object-position: center;
 }
 
-.crew-credits {
+.credits-text {
   position: relative;
+  color: #fff;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  align-self: stretch;
+  font: 400 40px Inter, sans-serif;
   border: 1px solid #000;
 }
 
-.cast-credits {
+.logo-container {
+  display: flex;
+  flex-direction: column;
   position: relative;
-  text-align: center;
-  align-self: center;
-  margin-top: 380px;
-  border: 1px solid #000;
+  min-height: 180px;
+  width: 600px;
+  max-width: 100%;
+  justify-content: center;
+  margin: 93px 0 0 30px;
+  padding: 3px 5px;
 }
 
 .logo-image {
   aspect-ratio: 3.33;
   object-fit: contain;
   object-position: center;
-  width: 600px;
-  position: absolute;
-  z-index: 0;
-  max-width: 100%;
-  right: 390px;
-  bottom: 394px;
-  height: 180px;
+  width: 100%;
+  z-index: 10;
+  margin-bottom: -5px;
 }
 
-.logo-overlay {
-  aspect-ratio: 3.33;
-  object-fit: contain;
-  object-position: center;
-  width: 600px;
-  position: absolute;
-  z-index: 0;
-  max-width: 100%;
-  right: 385px;
-  bottom: 389px;
-  height: 180px;
+.cast-text {
+  position: relative;
+  color: #fff;
+  text-align: center;
+  margin-top: 107px;
+  font: 400 40px Inter, sans-serif;
+  border: 1px solid #000;
 }
 
 @media (max-width: 991px) {
@@ -95,11 +87,20 @@
     margin-bottom: 10px;
   }
 
-  .crew-credits {
+  .credits-text {
     max-width: 100%;
   }
 
-  .cast-credits {
+  .logo-container {
+    margin-top: 40px;
+  }
+
+  .logo-image {
+    max-width: 100%;
+    margin-right: -5px;
+  }
+
+  .cast-text {
     max-width: 100%;
     margin-top: 40px;
   }
@@ -110,19 +111,21 @@
   <div class="credits-container">
     <div class="credits-content">
       <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/8621977f80fbec61e5c8a3a504388747fbc1c0fb1d4bffd01807dd23257a04ed?placeholderIfAbsent=true&apiKey=3047e898c4ba42dcaa3d9667ab0f4ccc" alt="" class="credits-background" />
-      <p class="crew-credits">
+      <p class="credits-text">
         原作・脚本・監督　宮崎駿 <br />
         プロデユーサー　鈴木敏夫 <br />
         音楽　久石譲 <br />
         主題歌　米良美一
       </p>
-      <p class="cast-credits">
+      <div class="logo-container">
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02d8ac85edfb98758fbbd7396b1f1dacc0764abe7afa0472c8f764b445edab60?placeholderIfAbsent=true&apiKey=3047e898c4ba42dcaa3d9667ab0f4ccc" alt="" class="credits-background" />
+        <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/43ffc4c885f5d4dfb5fc6a862f3a575f8ac8fabba3cc5c22c1e8f17b214fa6b4?placeholderIfAbsent=true&apiKey=3047e898c4ba42dcaa3d9667ab0f4ccc" alt="Movie logo" class="logo-image" />
+      </div>
+      <p class="cast-text">
         松田洋治　石田ゆり子 <br />
         田中裕子　小林薫・西村雅彦　上條恒彦・美輪明宏 <br />
         森 光子　森繁久彌
       </p>
     </div>
   </div>
-  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/02d8ac85edfb98758fbbd7396b1f1dacc0764abe7afa0472c8f764b445edab60?placeholderIfAbsent=true&apiKey=3047e898c4ba42dcaa3d9667ab0f4ccc" alt="Movie logo" class="logo-image" />
-  <img src="https://cdn.builder.io/api/v1/image/assets/TEMP/43ffc4c885f5d4dfb5fc6a862f3a575f8ac8fabba3cc5c22c1e8f17b214fa6b4?placeholderIfAbsent=true&apiKey=3047e898c4ba42dcaa3d9667ab0f4ccc" alt="" class="logo-overlay" />
 </section>
